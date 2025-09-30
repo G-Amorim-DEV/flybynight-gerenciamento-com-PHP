@@ -18,4 +18,19 @@ function buscar_fornecedores($conexao){
 }
 
 
+// Recebendo o nome de um novo fornecedor e insedir no BD
+function inserir_fornecedor($conexao, $nome){
+    /* Montando o comando SQL de INSERT e aplicando um "named parameter (parâmetro nomeado)*. Um parâmetro nomeado nada mais pe do que reservar um espaço para atribuir um valor ao comando.*/
+    $sql = "INSERT INTO fornecedores (nome) VALUES(:nome)";
+
+    // Prepare o camando acima ANTES de executar no BD
+    $consulta = $conexao->prepare($sql);
+
+    // Anexar/atrelar/ colocar um valor
+    $consulta->bindValue(":nome", $nome);
+
+    // Executamos a consulta com o comando e o valor
+    $consulta->execute();
+}
+
 ?>
