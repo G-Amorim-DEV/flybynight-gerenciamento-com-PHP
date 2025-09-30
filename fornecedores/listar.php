@@ -9,9 +9,12 @@ $fornecedores = buscar_fornecedores($conexao);
 
 // Testando a exibição de dados (só para o[a] programar[a])
 
-echo "<pre>";
+/*echo "<pre>";
 var_dump($fornecedores);
 echo "<pre>";
+*/
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
