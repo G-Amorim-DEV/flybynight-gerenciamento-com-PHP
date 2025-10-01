@@ -33,4 +33,6 @@ function inserir_fornecedor($conexao, $nome){
     $consulta->execute();
 }
 
+
+
 ?>

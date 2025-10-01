@@ -38,6 +38,7 @@ echo "<pre>";
         <tr>
             <th>ID</th>
             <th>Nome</th>
+            <th>Ações</th>
         </tr>
 
         <!-- As linhas (tr/td) abaixo serão geradas dinamicamente, ou seja usando um loop (forech) array($fornecedores) -->
@@ -47,7 +48,11 @@ echo "<pre>";
             <tr>
                 <td><?= $fornecedor["id"]; ?></td>
                 <td><?= $fornecedor["nome"]; ?></td>
-            </tr>
+                <td>
+                    <a href="editar.php">📝Editar</a>
+                    <a href="">❌Excluir</a>
+				</td>
+            </tr> 
 
         <?php } // ou endforeach; ?> 
 

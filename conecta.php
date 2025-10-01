@@ -5,7 +5,7 @@ seu site/projeto e o servidor MySQL. */
 
 // Parâmetros para conexão
 $servidor = "localhost"; // padrão no XAMPP
-$banco = "flybynight_guilherme";
+$banco = "flybynight_amorim";
 $usuario = "root"; // padrão no XAMPP
 $senha = ""; // padrão no XAMPP
 
