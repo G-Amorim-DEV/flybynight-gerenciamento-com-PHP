@@ -62,4 +62,15 @@ function atualizar_fornecedor($conexao, $nome, $id){
     $consulta->execute();
 }
 
+// Recebe o id do fornecedor a ser excluido
+function exluir_fornecedor($conexao, $id){
+
+    $sql = "DELETE FROM fornecedores WHERE id = :id";
+
+    $consulta = $conexao->prepare($sql); // prepare: coloca o comando sql em memoria
+
+    $consulta->bindValue(":id", $id); // bindValue: liga o valor ao parâmetro (:id)
+
+    $consulta->execute();
+}
 ?>
