@@ -12,6 +12,21 @@ $fornecedor = buscar_fornecedor_por_id($conexao, $id);
 var_dump($fornecedor);
 echo "</pre>";  */
 
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    // Então vamos pegar o valor do campo chamado nome (via atributo NAME)
+    $nome = $_POST['nome'];
+
+    // Chamamos a função, passamos os dados de conexão e o valor do nome digitado
+
+   atualizar_fornecedor($conexao, $nome, $id);
+
+    // Redirecionamos para a página listar.php
+    header("location:listar.php");
+
+    // sempre encerre/interrompe o script (evitando erros/execuções adicionais)
+    exit;
+}
+
 ?>
 
 <!DOCTYPE html>
