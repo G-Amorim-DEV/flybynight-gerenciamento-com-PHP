@@ -48,4 +48,18 @@ function buscar_fornecedor_por_id($conexao, $id){
     return $consulta->fetch(); // retorna o resultado da consulta como um array (vetor)
 }
 
+/* Recebe o nome e e id do fornecedor que sera atualizado */
+function atualizar_fornecedor($conexao, $nome, $id){
+
+    $sql = "UPDATE fornecedores SET nome = :nome WHERE id = :id";
+
+    $consulta = $conexao->prepare($sql);
+
+    // Vincular o(s) valor(es) ao(s) parâmetro(s)
+    $consulta->bindValue(":nome", $nome); 
+    $consulta->bindValue(":id", $id); 
+    
+    $consulta->execute();
+}
+
 ?>
