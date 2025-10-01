@@ -7,14 +7,14 @@ body {
 }
 
 /* Títulos */
-h1, h2 {
+.titulo, h1, h2 {
     color: #222;
     text-align: center;
     margin-bottom: 20px;
 }
 
 /* Links */
-a {
+.link-voltar, a {
     text-decoration: none;
     margin: 5px;
     color: #007bff;
@@ -22,7 +22,7 @@ a {
     transition: color 0.3s ease;
 }
 
-a:hover { 
+.link-voltar:hover, a:hover { 
     color: #0056b3;
     text-decoration: underline;
 }
@@ -75,7 +75,7 @@ tr:hover {
 }
 
 /* Formulário */
-form {
+.form-editar, form {
     width: 90%;
     max-width: 400px;
     margin: 0 auto 30px auto;
@@ -85,19 +85,19 @@ form {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-form div {
+.form-grupo, form div {
     margin-bottom: 15px;
     display: flex;
     flex-direction: column;
 }
 
-label {
+.form-label, label {
     margin-bottom: 5px;
     font-weight: bold;
     color: #333;
 }
 
-input[type="text"] {
+.form-input, input[type="text"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -105,28 +105,29 @@ input[type="text"] {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-input[type="text"]:focus {
+.form-input:focus, input[type="text"]:focus {
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0,123,255,0.3);
     outline: none;
 }
 
 /* Botão */
-button {
+.btn, button {
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
     font-size: 15px;
     font-weight: bold;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
-
 }
 
+.btn-primario, button {
+    background-color: #007bff;
+    color: #fff;
+}
 
-button:hover {
+.btn-primario:hover, button:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
 }
@@ -137,7 +138,7 @@ button:hover {
         width: 100%;
     }
 
-    form {
+    .form-editar, form {
         width: 95%;
         padding: 15px;
     }
