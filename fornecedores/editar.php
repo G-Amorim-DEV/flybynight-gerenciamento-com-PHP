@@ -1,5 +1,8 @@
 <?php
 
+// Estamos pegando da URL o valor do parâmetro chamado id
+$id = $_GET['id'];
+
 
 
 ?>
