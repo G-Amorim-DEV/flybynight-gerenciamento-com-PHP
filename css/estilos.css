@@ -13,6 +13,10 @@ body {
     margin-bottom: 20px;
 }
 
+.subtitulo{
+    justify-self: start;
+}
+
 /* Links */
 .link-voltar, a {
     text-decoration: none;
