@@ -5,7 +5,7 @@
 
 require_once "../conecta.php";
 
-    function buscar_produtos($conexao) {
+function buscar_produtos($conexao) {
     $sql = "SELECT produtos.id, produtos.nome_produto, produtos.quantidade, produtos.preco, fornecedores.nome  
     FROM produtos 
     JOIN fornecedores ON fornecedores.id = produtos.fornecedor_id
@@ -16,4 +16,22 @@ require_once "../conecta.php";
     return $consulta->fetchAll();
 }
 
+
+
+function inserir_produto($conexao, $nome, $descricao, $preco, $quantidade, $fornecedor){
+    
+    $sql = "INSERT INTO produtos (nome_produto, descricao, preco, quantidade, fornecedor_id) 
+            VALUES(:nome, :descricao, :preco, :quantidade, :fornecedor)";
+    
+    $consulta = $conexao->prepare($sql);
+
+
+    $consulta->bindValue(":nome", $nome);
+    $consulta->bindValue(":descricao", $descricao);
+    $consulta->bindValue(":preco", $preco);
+    $consulta->bindValue(":quantidade", $quantidade);
+    $consulta->bindValue(":fornecedor", $fornecedor); 
+    
+    $consulta->execute();
+}
 ?>
