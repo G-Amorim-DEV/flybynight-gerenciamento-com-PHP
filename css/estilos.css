@@ -43,12 +43,12 @@ table {
 }
 
 caption {
-    caption-side: top;        
+    caption-side: top;       
     font-weight: bold;        
     font-size: 18px;          
     color: #007bff;           
-    padding: 10px;          
-    text-align: center;       
+    padding: 10px;           
+    text-align: center;      
 }
 
 /* Cabeçalho */
@@ -78,7 +78,7 @@ tr:hover {
     transition: background 0.3s ease;
 }
 
-/* Formulário */
+/* Formulário Container */
 .form-editar, form {
     width: 90%;
     max-width: 400px;
@@ -101,18 +101,35 @@ tr:hover {
     color: #333;
 }
 
-.form-input, input[type="text"] {
+/* ESTILOS DE CAMPOS DE FORMULÁRIO (PADRÃO) */
+.form-input, 
+input[type="text"],
+textarea,
+select { 
+    /* Estilos Visuais Consistentes em todos os campos */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 14px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Garante que padding/borda não aumentem a largura */
+    width: 100%; /* Faz com que preencham o grupo */
 }
 
-.form-input:focus, input[type="text"]:focus {
+/* Foco em todos os campos */
+.form-input:focus, 
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0,123,255,0.3);
     outline: none;
+}
+
+/* AJUSTES DE TAMANHO ESPECÍFICOS */
+textarea {
+    min-height: 80px; /* Altura mínima para o campo de descrição */
+    resize: vertical; /* Permite redimensionar apenas verticalmente */
 }
 
 /* Botão */
@@ -135,6 +152,7 @@ tr:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
 }
+
 
 /* Responsividade */
 @media (max-width: 500px) {

@@ -19,7 +19,7 @@ $produtos = buscar_produtos($conexao);
 
 <body>
     <h1>Produtos</h1>
-    <a href="../fornecedores/inserir.php">+ Novo Produtos</a>
+    <a href="../produtos/inserir.php">+ Novo Produtos</a>
     <a href="../index.php">← Voltar</a>
 
     <!-- Estruturando uma tabela HTML para exibir os dados -->
