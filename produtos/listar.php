@@ -1,3 +1,12 @@
+<?php 
+
+require_once "..//src/produto_crud.php";
+
+$produtos = buscar_produtos($conexao);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -25,12 +34,14 @@
             <th>Ações</th>
         </tr>
 
-    
+        <?php foreach ($produtos as $produto) { ?>
+
             <tr>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
+                <td> <?= $produto["nome_produto"]; ?> </td>
+                <td> <?= $produto["preco"]; ?> </td>
+                <td> <?= $produto["quantidade"]; ?> </td>
+                <td> <?= $produto["nome"]; ?> </td>
+            
                 <td>
                     <!-- LINK DINÂMICO, ou seja, a url/endereço utiliza parâmetro(s) e valor(es) dinâmico(s) -->
                     <a href="editar.php?">📝Editar</a>
@@ -38,7 +49,7 @@
 				</td>
             </tr> 
 
-
+            <?php } ?>
 
     </table>
 

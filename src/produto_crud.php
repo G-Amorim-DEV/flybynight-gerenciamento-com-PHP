@@ -5,14 +5,15 @@
 
 require_once "../conecta.php";
 
-    function buscarProdutos($conexao) {
-        $sql = "SELECT produtos.id, produtos.nome, produtos.quantidade, fornecedores.nome
-            FROM produtos
-            JOIN fornecedores ON fornecedores.id = produtos.fornecedor_id
-            ORDER BY produtos.nome";
+    function buscar_produtos($conexao) {
+    $sql = "SELECT produtos.id, produtos.nome_produto, produtos.quantidade, produtos.preco, fornecedores.nome  
+    FROM produtos 
+    JOIN fornecedores ON fornecedores.id = produtos.fornecedor_id
+    ORDER BY produtos.nome_produto"; 
 
-        $consulta = $conexao->query($sql);
+    $consulta = $conexao->query($sql);
 
-            return $consulta->fetchAll();
-    }
+    return $consulta->fetchAll();
+}
+
 ?>
