@@ -33,7 +33,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 </head>
 <body>
     
-    <h1 class="titulo">Adicionando um novo produto</h1> <form action="" method="post" class="form-editar"> 
+    <h1 class="titulo">Adicionando um novo produto</h1> 
+    
+    <form action="" method="post" class="form-editar"> 
 
         <div class="form-grupo"> 
             <label for="nome" class="form-label">Nome:</label>
