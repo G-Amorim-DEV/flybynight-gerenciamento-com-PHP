@@ -44,8 +44,8 @@ $produtos = buscar_produtos($conexao);
             
                 <td>
                     <!-- LINK DINÂMICO, ou seja, a url/endereço utiliza parâmetro(s) e valor(es) dinâmico(s) -->
-                    <a href="editar.php?">📝Editar</a>
-                    <a class="excluir" href="excluir.php">❌Excluir</a>
+                    <a href="editar.php?id=<?=$produto['id']?>">📝Editar</a>
+                    <a class="excluir" href="excluir.php?id=<?=$produto['id']?>">❌Excluir</a>
 				</td>
             </tr> 
 

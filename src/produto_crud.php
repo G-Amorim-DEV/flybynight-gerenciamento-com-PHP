@@ -47,7 +47,7 @@ function buscar_produto_por_id($conexao, $id){
     $consulta->bindValue(":id", $id); 
     $consulta->execute(); 
 
-    return $consulta->fetch(PDO::FETCH_ASSOC); 
+    return $consulta->fetch(); 
 }
 
 function atualizar_produto($conexao, $nome, $descricao, $preco, $quantidade, $fornecedor_id, $id){
@@ -64,10 +64,10 @@ function atualizar_produto($conexao, $nome, $descricao, $preco, $quantidade, $fo
 
     $consulta->bindValue(":nome", $nome); 
     $consulta->bindValue(":descricao", $descricao); 
-    $consulta->bindValue(":preco", $preco, PDO::PARAM_STR); 
-    $consulta->bindValue(":quantidade", $quantidade, PDO::PARAM_INT); 
-    $consulta->bindValue(":fornecedor_id", $fornecedor_id, PDO::PARAM_INT); 
-    $consulta->bindValue(":id", $id, PDO::PARAM_INT); 
+    $consulta->bindValue(":preco", $preco); 
+    $consulta->bindValue(":quantidade", $quantidade); 
+    $consulta->bindValue(":fornecedor_id", $fornecedor_id); 
+    $consulta->bindValue(":id", $id); 
     
     $consulta->execute();
 }
