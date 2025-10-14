@@ -7,16 +7,21 @@ $id = $_GET['id'];
 
 $produto = buscar_produto_por_id($conexao, $id);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome = $_POST['nome'];
     $descricao = $_POST['descricao'];
-    $perco = $_POST['preco'];
+    $preco = $_POST['preco']; 
     $quantidade = $_POST['quantidade'];
     $fornecedor = $_POST['fornecedor'];
 
     atualizar_produto($conexao, $nome, $descricao, $preco, $quantidade, $fornecedor, $id);
+
+      header("location:listar.php");
+
+    exit;
 };
+
 
 $fornecedores = buscar_fornecedores($conexao);
 

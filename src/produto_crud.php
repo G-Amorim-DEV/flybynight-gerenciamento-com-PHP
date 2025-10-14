@@ -53,7 +53,7 @@ function buscar_produto_por_id($conexao, $id){
 function atualizar_produto($conexao, $nome, $descricao, $preco, $quantidade, $fornecedor_id, $id){
 
     $sql = "UPDATE produtos SET 
-            nome = :nome, 
+            nome_produto = :nome, 
             descricao = :descricao, 
             preco = :preco, 
             quantidade = :quantidade,
