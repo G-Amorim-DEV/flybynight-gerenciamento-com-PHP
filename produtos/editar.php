@@ -71,7 +71,7 @@ $fornecedores = buscar_fornecedores($conexao);
     <label for="fornecedor" class="form-label">Fornecedor</label>
     <select name="fornecedor" id="fornecedor" class="form-input">
         
-        <option value=""></option>
+        <option value="">--Selecione um Fornecedor--</option>
         
         <?php foreach ($fornecedores as $fornecedor): ?>
             <!-- Lógica da condicional abaixo é:
@@ -95,7 +95,7 @@ $fornecedores = buscar_fornecedores($conexao);
 
     </form>
 
-    <a href="listar.php" class="link-voltar">← Voltar</a>
+    <a href="listar.php" class="link-voltar"><button>← Voltar</button></a>
 
 </body>
 

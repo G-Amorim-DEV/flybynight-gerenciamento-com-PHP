@@ -60,7 +60,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         <div class="form-grupo">
             <label for="fornecedor" class="form-label">Fornecedor</label>
             <select name="fornecedor" id="fornecedor" class="form-input">
-                <option value=""></option>
+                <option value="">--Selecione um Fornecedor--</option>
                     <!-- Sempre mantenha um option vazio.
                     É o usuario que deve vir aqui escolher -->
                     <?php foreach($fornecedores as $fornecedor): ?>

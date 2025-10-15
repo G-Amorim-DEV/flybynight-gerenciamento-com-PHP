@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     </form>
 
-    <a href="listar.php" class="link-voltar">← Voltar</a>
+    <a href="listar.php" class="link-voltar"><button>← Voltar</button></a>
 
 </body>
 

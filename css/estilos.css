@@ -1,105 +1,126 @@
 /* Corpo e fontes */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    /* Fonte moderna e acessível (fallback mantém a segurança) */
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     margin: 20px;
-    background-color: #f8f9fa;
-    color: #333;
+    /* Fundo com degradê moderno e suave */
+    background: linear-gradient(135deg, #e6e9f0 0%, #f4f6fa 100%);
+    background-color: #d4dae7;
+    min-height: 100vh;
+    color: #2c3e50; /* Tom de cinza escuro para melhor contraste */
 }
 
 /* Títulos */
 .titulo, h1, h2 {
-    color: #222;
+    /* Cor mais profunda e moderna para o título */
+    color: #1a2a3a;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px; /* Aumenta um pouco o espaçamento */
+    font-weight: 600; /* Deixa o título mais forte */
 }
 
 .subtitulo{
     justify-self: center;
-    text-align: center; /* Adicionado para centralizar o subtítulo também */
+    text-align: center;
+    color: #008cff; /* Usa um azul mais vibrante */
+    margin-bottom: 20px;
 }
 
 /* Links */
 .link-voltar, a {
     text-decoration: none;
     margin: 5px;
-    color: #007bff;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    /* Cor azul primária mais vibrante e acessível */
+    color: #008cff;
+    font-weight: 500;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .link-voltar:hover, a:hover { 
-    color: #0056b3;
+    color: #006ab3; /* Tom escuro para hover, garante contraste */
     text-decoration: underline;
 }
 
 /* Tabelas */
 table {
-    width: 80%;
-    margin: 20px auto;
+    width: 85%; /*  Aumenta um pouco a largura para melhor aproveitamento */
+    margin: 30px auto; /* Aumenta o espaçamento vertical */
     border-collapse: collapse;
     background: #fff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    border-radius: 6px;
+    /* Sombra moderna e elevada (neumorfismo sutil) */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08); 
+    border-radius: 12px; /* Borda mais arredondada */
     overflow: hidden;
+    /* Garante que o fundo branco da tabela destaque-se do fundo da página */
+    border: 1px solid #e0e6ed; 
 }
 
 caption {
     caption-side: top;      
-    font-weight: bold;      
-    font-size: 18px;        
-    color: #007bff;         
-    padding: 10px;          
+    font-weight: 700;      
+    font-size: 20px;       /* Aumenta a fonte do título da tabela */ 
+    color: #008cff;         
+    padding: 15px;          
     text-align: center;     
 }
 
 /* Cabeçalho */
 th {
-    background-color: #007bff;
+    /* Cor do cabeçalho mais vibrante e moderno */
+    background-color: #008cff;
     color: #fff;
-    padding: 12px;
+    padding: 14px 18px; /* Aumenta o padding */
     text-align: left;
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px; /* Adiciona um pequeno espaçamento para modernizar */
 }
 
 /* Células */
 td {
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
-    font-size: 14px;
+    border-bottom: 1px solid #ebf0f5; /* Borda mais clara e suave */
+    padding: 12px 18px;
+    font-size: 15px; /* Aumenta um pouco o tamanho da fonte da célula */
+    color: #3f5166;
 }
 
 /* Linhas alternadas (efeito zebra) */
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #f7f9fc; /* Cor de zebra mais sutil */
 }
 
 /* Efeito hover na linha */
 tr:hover {
-    background-color: #e9f3ff;
-    transition: background 0.3s ease;
+    background-color: #e3f2fd; /* Efeito hover mais suave */
+    /* Adiciona uma sombra sutil no hover para um efeito 'elevado' */
+    box-shadow: 0 2px 5px rgba(0, 140, 255, 0.1); 
+    cursor: pointer; /* Indica que a linha pode ser clicável/interativa */
+    transition: all 0.3s ease;
 }
 
 /* Formulário Container */
 .form-editar, form {
-    width: 90%;
-    max-width: 400px;
+    width: 95%;
+    max-width: 450px; /* Permite que o formulário seja um pouco maior */
     margin: 0 auto 30px auto;
-    padding: 20px;
+    padding: 30px; /* Aumenta o padding interno */
     background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 12px; /* Borda mais arredondada */
+    /* Sombra mais pronunciada e moderna */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15); 
 }
 
 .form-grupo, form div {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Aumenta espaçamento entre os grupos */
     display: flex;
     flex-direction: column;
 }
 
 .form-label, label {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 15px;
 }
 
 /* ESTILOS DE CAMPOS DE FORMULÁRIO (PADRÃO) */
@@ -107,14 +128,14 @@ tr:hover {
 input[type="text"],
 textarea,
 select { 
-    /* Estilos Visuais Consistentes em todos os campos */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
+    padding: 12px; /* Aumenta o padding interno */
+    border: 1px solid #dcdcdc; /* Borda mais clara */
+    border-radius: 8px; /* Borda levemente mais arredondada */
+    font-size: 15px;
+    color: #2c3e50;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    box-sizing: border-box; /* Garante que padding/borda não aumentem a largura */
-    width: 100%; /* Faz com que preencham o grupo */
+    box-sizing: border-box;
+    width: 100%;
 }
 
 /* Foco em todos os campos */
@@ -122,49 +143,55 @@ select {
 input[type="text"]:focus,
 textarea:focus,
 select:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0,123,255,0.3);
+    /* Foco com azul vibrante e sombra interna */
+    border-color: #008cff;
+    box-shadow: 0 0 0 3px rgba(0, 140, 255, 0.2); 
     outline: none;
 }
 
 /* AJUSTES DE TAMANHO ESPECÍFICOS */
 textarea {
-    min-height: 80px; /* Altura mínima para o campo de descrição */
-    resize: vertical; /* Permite redimensionar apenas verticalmente */
+    min-height: 100px; /* Aumenta um pouco a altura mínima */
+    resize: vertical;
 }
 
 /* Botão */
 .btn, button {
-    padding: 10px 20px;
-    font-size: 15px;
-    font-weight: bold;
+    padding: 12px 25px; /* Aumenta o padding */
+    font-size: 16px;
+    font-weight: 600;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .btn-primario, button {
-    background-color: #007bff;
+    /* Usa o novo azul vibrante */
+    background-color: #008cff;
     color: #fff;
+    /* Sombra para efeito 3D sutil (acessibilidade por elevação) */
+    box-shadow: 0 4px 10px rgba(0, 140, 255, 0.3);
 }
 
 .btn-primario:hover, button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+    background-color: #006ab3;
+    transform: translateY(-3px); /* Efeito mais perceptível */
+    box-shadow: 0 6px 15px rgba(0, 140, 255, 0.4);
 }
 
-/* --- ADIÇÕES PARA O MENU DA PÁGINA INICIAL (UL) --- */
+/* --- MENU DA PÁGINA INICIAL (UL) --- */
 
 /* Lista de navegação (Menu Principal) */
 ul {
-    list-style: none; /* Remove os marcadores de lista */
+    list-style: none;
     padding: 0;
-    display: flex; /* Transforma a lista em uma linha flexível */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    gap: 20px; /* Espaçamento entre os botões */
-    margin-top: 30px;
-    flex-wrap: wrap; /* Permite que os botões quebrem a linha em telas pequenas */
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Aumenta o espaçamento entre botões */
+    margin-top: 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
 /* Itens da lista */
@@ -173,26 +200,46 @@ li {
 }
 
 /* Botões dentro da lista de navegação */
-/* Sobrescreve o estilo do botão para que ele se ajuste melhor ao menu */
 ul button {
-    min-width: 150px; /* Garante que os botões tenham um tamanho mínimo */
-    padding: 15px 30px; /* Aumenta o padding para botões de menu */
+    min-width: 180px; /* Deixa os botões maiores */
+    padding: 18px 35px; 
+    font-size: 17px;
 }
 
 /* Responsividade */
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     table {
         width: 100%;
+        border-radius: 8px;
     }
+}
 
+@media (max-width: 500px) {
+    /* Reduz a margem do corpo em mobile */
+    body {
+        margin: 10px;
+    }
+    .titulo {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
     .form-editar, form {
-        width: 95%;
-        padding: 15px;
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
     
     /* Ajusta o espaçamento do menu em telas muito pequenas */
     ul {
-        flex-direction: column; /* Coloca os botões em coluna em telas pequenas */
-        align-items: center; /* Centraliza os botões */
+        gap: 15px;
+        flex-direction: column; 
+        align-items: center; 
+    }
+    ul button {
+        min-width: 90%; /* Ocupa a maior parte da tela */
+    }
+    td, th {
+        padding: 10px 12px;
+        font-size: 14px;
     }
 }

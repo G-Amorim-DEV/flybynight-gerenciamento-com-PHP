@@ -28,8 +28,8 @@ echo "<pre>";
 
 <body>
     <h1>Fornecedores</h1>
-    <a href="../fornecedores/inserir.php">+ Novo fornecedor</a>
-    <a href="../index.php">← Voltar</a>
+    <a href="../fornecedores/inserir.php"><button>+ Novo fornecedor</button></a>
+    <a href="../index.php"><button>← Voltar</button></a>
 
     <!-- Estruturando uma tabela HTML para exibir os dados -->
 
