@@ -19,7 +19,7 @@ $lojas = buscar_lojas($conexao);
 
 <body>
     <h1>Produtos</h1>
-    <a href="../produtos/inserir.php">+ Nova Loja</a>
+    <a href="../lojas/inserir.php">+ Nova Loja</a>
     <a href="../index.php">← Voltar</a>
 
 

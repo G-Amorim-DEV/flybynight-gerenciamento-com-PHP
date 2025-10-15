@@ -18,7 +18,7 @@ function inserir_lojas($conexao, $nome){
 
     $consulta -> bindValue(":nome", $nome);
 
-    $consulta -> execulte();
+    $consulta -> execute();
 
 }
 
@@ -49,7 +49,7 @@ function atualizar_loja($conexao, $nome, $id){
 
 function excluir_loja($conexao, $id){
 
-    $sql = "DELETE FROM jojas WHERE id = :id";
+    $sql = "DELETE FROM lojas WHERE id = :id";
 
     $consulta = $conexao->prepare($sql); 
 
