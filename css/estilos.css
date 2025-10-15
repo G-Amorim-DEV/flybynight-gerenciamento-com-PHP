@@ -14,7 +14,8 @@ body {
 }
 
 .subtitulo{
-    justify-self: start;
+    justify-self: center;
+    text-align: center; /* Adicionado para centralizar o subtítulo também */
 }
 
 /* Links */
@@ -43,12 +44,12 @@ table {
 }
 
 caption {
-    caption-side: top;       
-    font-weight: bold;        
-    font-size: 18px;          
-    color: #007bff;           
-    padding: 10px;           
-    text-align: center;      
+    caption-side: top;      
+    font-weight: bold;      
+    font-size: 18px;        
+    color: #007bff;         
+    padding: 10px;          
+    text-align: center;     
 }
 
 /* Cabeçalho */
@@ -153,6 +154,30 @@ textarea {
     transform: translateY(-2px);
 }
 
+/* --- ADIÇÕES PARA O MENU DA PÁGINA INICIAL (UL) --- */
+
+/* Lista de navegação (Menu Principal) */
+ul {
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 0;
+    display: flex; /* Transforma a lista em uma linha flexível */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Espaçamento entre os botões */
+    margin-top: 30px;
+    flex-wrap: wrap; /* Permite que os botões quebrem a linha em telas pequenas */
+}
+
+/* Itens da lista */
+li {
+    margin: 5px 0;
+}
+
+/* Botões dentro da lista de navegação */
+/* Sobrescreve o estilo do botão para que ele se ajuste melhor ao menu */
+ul button {
+    min-width: 150px; /* Garante que os botões tenham um tamanho mínimo */
+    padding: 15px 30px; /* Aumenta o padding para botões de menu */
+}
 
 /* Responsividade */
 @media (max-width: 500px) {
@@ -163,5 +188,11 @@ textarea {
     .form-editar, form {
         width: 95%;
         padding: 15px;
+    }
+    
+    /* Ajusta o espaçamento do menu em telas muito pequenas */
+    ul {
+        flex-direction: column; /* Coloca os botões em coluna em telas pequenas */
+        align-items: center; /* Centraliza os botões */
     }
 }

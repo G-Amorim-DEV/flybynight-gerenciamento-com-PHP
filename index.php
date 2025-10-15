@@ -10,9 +10,9 @@
     <h1 class="titulo">Fly By Night - CRUD com PHP e SQL</h1>
     <h2 class="subtitulo">Gerenciar</h2>
     <ul>
-        <li><a href="fornecedores/listar.php">Fornecedores</a></li>
-        <li><a href="produtos/listar.php">Produtos</a></li>
-        <li><a href="lojas/listar.php">Lojas</a></li>
+        <li><a href="fornecedores/listar.php"><button>Fornecedores</button></a></li>
+        <li><a href="produtos/listar.php"><button>Produtos</button></a></li>
+        <li><a href="lojas/listar.php"><button>Lojas</button></a></li>
     </ul>
 </body>
 </html>

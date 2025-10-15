@@ -1,6 +1,6 @@
 <?php 
 
-require_once "../src/loja_crud.php"; 
+require_once "../src/lojas_crud.php"; 
 
 $lojas = buscar_lojas($conexao);
 
@@ -18,7 +18,7 @@ $lojas = buscar_lojas($conexao);
 </head>
 
 <body>
-    <h1>Produtos</h1>
+    <h1>Lojas</h1>
     <a href="../lojas/inserir.php">+ Nova Loja</a>
     <a href="../index.php">← Voltar</a>
 
