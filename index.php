@@ -13,7 +13,7 @@
         <li><a href="fornecedores/listar.php"><button>Fornecedores</button></a></li>
         <li><a href="produtos/listar.php"><button>Produtos</button></a></li>
         <li><a href="lojas/listar.php"><button>Lojas</button></a></li>
-        <li><a href="lojas/listar.php"><button>Estoques (Lojas X Produtos)</button></a></li>
+        <li><a href="estoque/listar.php"><button>Estoques (Lojas X Produtos)</button></a></li>
     </ul>
 </body>
 </html>
